@@ -30,24 +30,43 @@ Here I've worked with data from Maven Market, a multi-national grocery chain wit
 for creating new column following DAX expression was written;
 
 for some calculated columns :-
+
      Weekend = IF('Calendar'[Name of Day] = "Saturday"||'Calendar'[Name of Day] ="Sunday","Y","N")
+     
      End of Month = EOMONTH('Calendar'[date],0)
+     
      Short_Country = UPPER(LEFT('Customers'[customer_country],3))
+     
      House Number = LEFT('Customers'[customer_address],SEARCH(" ",'Customers'[customer_address],1,BLANK()) -1)
+     
      Current Age = DATEDIFF('Customers'[birthdate],TODAY(),YEAR)
+     
      Priority = IF('Customers'[homeowner] = "Y" &&'Customers'[member_card] = "Golden","High","Standard")
+     
 for some DAX measures :-
+
      Last Month Profit = CALCULATE('Transaction_Data'[Total Profit],DATEADD('Calendar'[date],-1,MONTH))
+     
      Profit Margin = AVERAGEX('Transaction_Data',DIVIDE('Transaction_Data'[Total Profit],'Transaction_Data'[Total Revenue],BLANK()))
+     
      Revenue Target = 'Transaction_Data'[Last Month Revenue] * 1.05
+     
      Total Revenue = SUMX('Transaction_Data','Transaction_Data'[quantity]*RELATED('Products'[product_retail_price]))
+     
      YTD Revenue = CALCULATE('Transaction_Data'[Total Revenue],DATESYTD('Calendar'[date]))
+     
      Return Rate = DIVIDE('Return_Data'[Quantity Returned],'Transaction_Data'[Quantity Sold],BLANK())
+     
      % Weekend Transactions = DIVIDE('Transaction_Data'[Weekend Transactions],'Transaction_Data'[Total Transactions],BLANK())
-    60-Day Revenue = CALCULATE('Transaction_Data'[Total Revenue],DATESINPERIOD('Calendar'[date],MAX('Calendar'[date]),-60,DAY))    
+     
+    60-Day Revenue = CALCULATE('Transaction_Data'[Total Revenue],DATESINPERIOD('Calendar'[date],MAX('Calendar'[date]),-60,DAY))   
+    
 
     
 Snap of new calculated column ,
+
+
+
 ![image](https://github.com/23Priy/-MavenMarket_Report/assets/151018390/716fe48a-86ca-46ed-9c01-f3a20410a430)
 ![image](https://github.com/23Priy/-MavenMarket_Report/assets/151018390/59ca4169-bdd0-4f8a-97e1-21ed7f60ec2f)
 ![image](https://github.com/23Priy/-MavenMarket_Report/assets/151018390/93b0dc7f-aaeb-4f8e-8f18-973db1889079)
@@ -56,7 +75,7 @@ Snap of new calculated column ,
 
 
 
-Snap of DATA MODEL
+Snap of DATA MODEL,
 ![image](https://github.com/23Priy/-MavenMarket_Report/assets/151018390/923f434d-e2f8-4229-a7a0-a41880857028)
 
 
