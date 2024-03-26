@@ -32,6 +32,7 @@ for creating new column following DAX expression was written;
         
         
 Snap of new calculated column ,
+![image](https://github.com/23Priy/-MavenMarket_Report/assets/151018390/bfe988ad-adb4-4bc5-9106-c65592f27f11)
 
 
 
