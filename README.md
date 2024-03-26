@@ -27,9 +27,9 @@ Here I've worked with data from Maven Market, a multi-national grocery chain wit
   
 
 
-for creating new column following DAX expression was written;
+###for creating new column following DAX expression was written;
 
-for some calculated columns :-
+###for some calculated columns :-
 
      Weekend = IF('Calendar'[Name of Day] = "Saturday"||'Calendar'[Name of Day] ="Sunday","Y","N")
      
@@ -43,7 +43,7 @@ for some calculated columns :-
      
      Priority = IF('Customers'[homeowner] = "Y" &&'Customers'[member_card] = "Golden","High","Standard")
      
-for some DAX measures :-
+###for some DAX measures :-
 
      Last Month Profit = CALCULATE('Transaction_Data'[Total Profit],DATEADD('Calendar'[date],-1,MONTH))
      
@@ -63,7 +63,7 @@ for some DAX measures :-
     
 
     
-Snap of new calculated column ,
+##Snap of new calculated column ,
 
 
 
@@ -75,7 +75,7 @@ Snap of new calculated column ,
 
 
 
-Snap of DATA MODEL,
+##Snap of DATA MODEL,
 ![image](https://github.com/23Priy/-MavenMarket_Report/assets/151018390/923f434d-e2f8-4229-a7a0-a41880857028)
 
 
@@ -89,6 +89,6 @@ Snap of DATA MODEL,
 
 
 
-Outcomes Achieved
+##Outcomes Achieved
 
 This project helped me understand the whole process of Data Analysis with a project that was not as easy as I thought it would be. It revealed areas where I need to work on and definitely will help me to showcase my data cleaning and data visualization skills to the recruiters. I really enjoyed working on this project and that made me realize how I'm moving in the right direction. It is done entirely in Power BI which Pis a great tool to start with because of its user friendly interface and it has so many ever updating features to make beautiful and insight bringing reports and publishing the same using Power BI services. Hence, I chose Power BI for my project. I'm happy that I was able to use the skills I've learned so much more.
