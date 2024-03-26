@@ -2,7 +2,7 @@
 # Data Analysis Project
 
 ## Data Used
-Data used to make the report is added to the file section named 
+Data used to make the report is added to the file section named "Maven Market CSV Files.zip" which is .zip file containing the 8 CSV files, Also the final report file MavenMarket_Report.pbix is uploaded there.
 ## Problem Statement
 
 Here I've worked with data from Maven Market, a multi-national grocery chain with locations in Canada, Mexico and the United States. This is a guided project (reference - udemy) that I've completely by myself but also with the directions followed and the lectures were a big help to understand everything where I stuck. This was to practice my skills and also showcase them to the potential recruiters how well I understand the concept of Data Analysis using Power BI.
@@ -24,12 +24,10 @@ Here I've worked with data from Maven Market, a multi-national grocery chain wit
 - Step 13 : Visual filters (Slicers) were added as needed on the Page.
 - Step 14 : Topline performance page is made as shown below using the various visualization and formatting options in the report view.
 
+
   
-
-
-###for creating new column following DAX expression was written;
-
-###for some calculated columns :-
+###  for creating new column following DAX expression was written;
+###  for some calculated columns :-
 
      Weekend = IF('Calendar'[Name of Day] = "Saturday"||'Calendar'[Name of Day] ="Sunday","Y","N")
      
@@ -43,7 +41,7 @@ Here I've worked with data from Maven Market, a multi-national grocery chain wit
      
      Priority = IF('Customers'[homeowner] = "Y" &&'Customers'[member_card] = "Golden","High","Standard")
      
-###for some DAX measures :-
+###  for some DAX measures :-
 
      Last Month Profit = CALCULATE('Transaction_Data'[Total Profit],DATEADD('Calendar'[date],-1,MONTH))
      
@@ -61,11 +59,7 @@ Here I've worked with data from Maven Market, a multi-national grocery chain wit
      
     60-Day Revenue = CALCULATE('Transaction_Data'[Total Revenue],DATESINPERIOD('Calendar'[date],MAX('Calendar'[date]),-60,DAY))   
     
-
-    
-##Snap of new calculated column ,
-
-
+###  Snap of calculated columns,
 
 ![image](https://github.com/23Priy/-MavenMarket_Report/assets/151018390/716fe48a-86ca-46ed-9c01-f3a20410a430)
 ![image](https://github.com/23Priy/-MavenMarket_Report/assets/151018390/59ca4169-bdd0-4f8a-97e1-21ed7f60ec2f)
@@ -73,22 +67,15 @@ Here I've worked with data from Maven Market, a multi-national grocery chain wit
 ![image](https://github.com/23Priy/-MavenMarket_Report/assets/151018390/60eb0faf-feee-4bfd-9b19-f7549578bf9c)
 ![image](https://github.com/23Priy/-MavenMarket_Report/assets/151018390/0e889cfc-f3eb-40e9-9905-5da396d624e1)
 
+###  Snap of DATA MODEL,
 
-
-##Snap of DATA MODEL,
 ![image](https://github.com/23Priy/-MavenMarket_Report/assets/151018390/923f434d-e2f8-4229-a7a0-a41880857028)
-
-
-
-
-        
  
- # Report Snapshot (Power BI DESKTOP)
+## Report Snapshot (Power BI DESKTOP)
 
  ![image](https://github.com/23Priy/-MavenMarket_Report/assets/151018390/90be8d59-3637-4acc-a973-0c17d794f47d)
 
 
-
-##Outcomes Achieved
+###  Outcomes Achieved
 
 This project helped me understand the whole process of Data Analysis with a project that was not as easy as I thought it would be. It revealed areas where I need to work on and definitely will help me to showcase my data cleaning and data visualization skills to the recruiters. I really enjoyed working on this project and that made me realize how I'm moving in the right direction. It is done entirely in Power BI which Pis a great tool to start with because of its user friendly interface and it has so many ever updating features to make beautiful and insight bringing reports and publishing the same using Power BI services. Hence, I chose Power BI for my project. I'm happy that I was able to use the skills I've learned so much more.
